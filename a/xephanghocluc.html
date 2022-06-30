@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>diem trung binh bai kiem tra</p>
+<input type="text" id="diemkiemytra"><br>
+<p>diem thi giua ki</p>
+<input type="text" id="diemgiuaky"><br>
+<p>diem thi hoc ky</p>
+<input type="text" id="diemthihocky"><br><br>
+<button onclick="result()">click</button>
+<h1 id="result"></h1>
+</body>
+<script>
+    function result(){
+        let a = +document.getElementById('diemkiemytra').value
+        let b = +document.getElementById('diemgiuaky').value
+        let c = +document.getElementById('diemthihocky').value
+        let d = (a+b+c)/3
+        if (d<5){
+            document.getElementById('result').innerText= d +' '+ 'hoc luc yeu'
+        }else if(5<d && d<6.5){
+            document.getElementById('result').innerText= d +' '+ 'hoc luc trung binh'
+        }else if(6.5<d && d<8){
+            document.getElementById('result').innerText= d +' '+ 'hoc luc kha'
+        }else{
+            document.getElementById('result').innerText= d +' '+ 'hoc luc gioi'
+        }
+    }
+</script>
+</html>
